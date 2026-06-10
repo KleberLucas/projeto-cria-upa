@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário - Pré Triagem</title>
+
+    <link rel="stylesheet" href="Questionario.css">
+
+    <link rel="stylesheet"
+    href="Questionario.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo-area">
+
+        <img src="LOGOUPA.PNG" alt="UPA">
+
+        <div class="titulo">
+            <h1>Pré-Triagem</h1>
+            <p>Protocolo de Manchester</p>
+        </div>
+
+    </div>
+
+    <div class="topo-direita">
+
+        <div class="data">
+            <i class="fa-regular fa-calendar"></i>
+            22/05/2024
+            <span>Quarta-feira</span>
+        </div>
+
+        <div class="hora">
+            <i class="fa-regular fa-clock"></i>
+            10:30
+        </div>
+
+        <button class="btn-topo">
+            <i class="fa-solid fa-volume-high"></i>
+            ÁUDIO
+        </button>
+
+        <button class="btn-topo">
+            <i class="fa-solid fa-a"></i>
+            AUMENTAR FONTE
+        </button>
+
+    </div>
+
+</header>
+
+<div class="linha-verde"></div>
+
+<section class="titulo-pagina">
+
+    <h2>Responda às perguntas abaixo:</h2>
+
+    <p>
+        Suas respostas nos ajudam a entender melhor o seu estado de saúde.
+    </p>
+
+</section>
+
+<section class="perguntas">
+
+    <div class="pergunta">
+        <div class="numero">1</div>
+
+        <div class="texto">
+            Você está com dor?
+        </div>
+
+        <div class="respostas">
+
+            <button class="btn-sim">
+                <i class="fa-solid fa-check"></i>
+                SIM
+            </button>
+
+            <button class="btn-nao">
+                <i class="fa-solid fa-xmark"></i>
+                NÃO
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pergunta">
+        <div class="numero">2</div>
+
+        <div class="texto">
+            A dor começou de forma repentina?
+        </div>
+
+        <div class="respostas">
+
+            <button class="btn-sim">
+                <i class="fa-solid fa-check"></i>
+                SIM
+            </button>
+
+            <button class="btn-nao">
+                <i class="fa-solid fa-xmark"></i>
+                NÃO
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pergunta">
+        <div class="numero">3</div>
+
+        <div class="texto">
+            A dor é muito forte?
+        </div>
+
+        <div class="respostas">
+
+            <button class="btn-sim">
+                <i class="fa-solid fa-check"></i>
+                SIM
+            </button>
+
+            <button class="btn-nao">
+                <i class="fa-solid fa-xmark"></i>
+                NÃO
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pergunta">
+        <div class="numero">4</div>
+
+        <div class="texto">
+            Você está com falta de ar?
+        </div>
+
+        <div class="respostas">
+
+            <button class="btn-sim">
+                <i class="fa-solid fa-check"></i>
+                SIM
+            </button>
+
+            <button class="btn-nao">
+                <i class="fa-solid fa-xmark"></i>
+                NÃO
+            </button>
+
+        </div>
+    </div>
+
+    <div class="pergunta">
+        <div class="numero">5</div>
+
+        <div class="texto">
+            Você está com febre?
+        </div>
+
+        <div class="respostas">
+
+            <button type="button" class="btn-sim">
+                <i class="fa-solid fa-check"></i>
+                SIM
+            </button>
+        
+            <button type="button" class="btn-nao">
+                <i class="fa-solid fa-xmark"></i>
+                NÃO
+            </button>
+        
+        </div>
+    </div>
+
+</section>
+
+<div class="aviso">
+
+    <i class="fa-solid fa-circle-info"></i>
+
+    <span>
+        <strong>Importante:</strong>
+        Responda com atenção para que possamos direcioná-lo ao atendimento mais adequado.
+    </span>
+
+</div>
+
+<footer>
+
+    <button class="btn-voltar"
+        onclick="window.location.href='Sintomas.html'">
+        <i class="fa-solid fa-arrow-left"></i>
+        VOLTAR
+    </button>
+
+    <div class="seguro">
+        🔒 Seus dados estão protegidos.<br>
+        Este é um ambiente seguro.
+    </div>
+
+    <button class="btn-proximo"
+        onclick="window.location.href='classificacao.html'">
+        PRÓXIMO
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+</footer>
+<script>
+
+    document.querySelectorAll('.respostas').forEach(grupo => {
+    
+        const botoes = grupo.querySelectorAll('button');
+    
+        botoes.forEach(botao => {
+    
+            botao.addEventListener('click', () => {
+    
+                botoes.forEach(btn => {
+                    btn.classList.remove('selecionado');
+                });
+    
+                botao.classList.add('selecionado');
+    
+            });
+    
+        });
+    
+    });
+    
+    function validarFormulario(){
+    
+        const perguntas =
+        document.querySelectorAll('.respostas');
+    
+        let respondidas = 0;
+    
+        perguntas.forEach(pergunta => {
+    
+            if(pergunta.querySelector('.selecionado')){
+                respondidas++;
+            }
+    
+        });
+    
+        if(respondidas < perguntas.length){
+    
+            alert("Responda todas as perguntas antes de continuar.");
+    
+            return;
+        }
+    
+        window.location.href = "classificacao.html";
+    
+    }
+    
+    </script>
+
+</body>
+</html>

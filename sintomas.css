@@ -1,0 +1,192 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f6f7;
+}
+
+.topo{
+    background:rgb(238, 238, 241);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.logo-container img{
+    height:80px;
+}
+
+.titulo{
+    border-left:2px solid #d9d9d9;
+    padding-left:25px;
+}
+
+.titulo h1{
+    color:#009245;
+    font-size:40px;
+}
+
+.titulo p{
+    color:#444;
+    font-size:20px;
+}
+
+.acoes-topo{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.data-hora{
+    display:flex;
+    gap:20px;
+    font-size:18px;
+}
+
+.btn-topo{
+    height:55px;
+    padding:0 25px;
+    background:#fff;
+    border:2px solid #009245;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.linha-verde{
+    height:3px;
+    background:#009245;
+}
+
+.titulo-principal{
+    text-align:center;
+    margin:40px 0;
+}
+
+.titulo-principal h2{
+    font-size:50px;
+    color:#222;
+}
+
+.titulo-principal span{
+    color:#009245;
+}
+
+.titulo-principal p{
+    margin-top:15px;
+    font-size:32px;
+}
+
+.grid-sintomas{
+    width:95%;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:20px;
+
+    height:250px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    font-size:80px;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border:2px solid #009245;
+}
+
+.card h3{
+    margin-top:20px;
+    font-size:22px;
+    text-align:center;
+    width:80%;
+}
+
+.alerta{
+    width:95%;
+    margin:30px auto;
+
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:15px;
+
+    padding:25px;
+
+    text-align:center;
+    font-size:24px;
+}
+
+.alerta i{
+    color:#009245;
+}
+
+footer{
+    width:95%;
+    margin:30px auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.btn-voltar{
+    width:260px;
+    height:85px;
+
+    border:2px solid #009245;
+    border-radius:12px;
+
+    background:#fff;
+    color:#009245;
+
+    font-size:28px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.btn-continuar{
+    width:350px;
+    height:85px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#009245;
+    color:#fff;
+
+    font-size:28px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.seguro{
+    text-align:center;
+    color:#666;
+    font-size:18px;
+}

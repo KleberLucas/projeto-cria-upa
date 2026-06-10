@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pré-Triagem UPA</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="Dados.css">
+</head>
+
+<body>
+
+<header class="topo">
+
+    <div class="logo-area">
+        <img src="LOGOUPA.PNG" alt="UPA">
+    </div>
+
+    <div class="titulo">
+        <h1>PRÉ-TRIAGEM</h1>
+        <span>Protocolo de Manchester</span>
+    </div>
+
+    <div class="info-topo">
+        <div id="data"></div>
+        <div id="hora"></div>
+    </div>
+
+</header>
+
+<div class="container">
+
+    <div class="botoes-superiores"
+         onclick="window.location.href='SistemaBasicodeSaude.html'">
+
+        <button class="btn-azul">
+            <i class="fas fa-arrow-left"></i>
+            VOLTAR
+        </button>
+
+        <div class="direita">
+
+            <button class="btn-azul">
+                <i class="fas fa-volume-high"></i>
+                ÁUDIO
+            </button>
+
+            <button class="btn-azul" onclick="aumentarFonte()">
+                <i class="fas fa-text-height"></i>
+                AUMENTAR FONTE
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="cabecalho-form">
+
+        <div class="icone">
+            <i class="far fa-user"></i>
+        </div>
+
+        <div>
+            <h2>Informe seus dados para localizarmos seu cadastro</h2>
+            <p>
+                Preencha com atenção para que possamos encontrar suas informações.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="campo">
+        <label>NOME COMPLETO</label>
+        <input type="text" id="nome" readonly placeholder="Digite seu nome completo">
+    </div>
+
+    <div class="linha">
+
+        <div class="campo data">
+            <label>DATA DE NASCIMENTO</label>
+
+            <div class="input-icon">
+                <input type="text"
+                id="nascimento"
+                placeholder="DD / MM / AAAA">
+
+                <i class="far fa-calendar"></i>
+            </div>
+
+        </div>
+
+        <div class="aviso">
+            <i class="fas fa-circle-info"></i>
+            Digite os dados exatamente como estão no seu documento.
+        </div>
+
+    </div>
+
+    <div class="teclado">
+
+        <div class="linha-teclado">
+            <button onclick="digitar('Q')">Q</button>
+            <button onclick="digitar('W')">W</button>
+            <button onclick="digitar('E')">E</button>
+            <button onclick="digitar('R')">R</button>
+            <button onclick="digitar('T')">T</button>
+            <button onclick="digitar('Y')">Y</button>
+            <button onclick="digitar('U')">U</button>
+            <button onclick="digitar('I')">I</button>
+            <button onclick="digitar('O')">O</button>
+            <button onclick="digitar('P')">P</button>
+            <button onclick="apagar()">
+                <i class="fas fa-delete-left"></i>
+            </button>
+        </div>
+
+        <div class="linha-teclado">
+            <button onclick="digitar('A')">A</button>
+            <button onclick="digitar('S')">S</button>
+            <button onclick="digitar('D')">D</button>
+            <button onclick="digitar('F')">F</button>
+            <button onclick="digitar('G')">G</button>
+            <button onclick="digitar('H')">H</button>
+            <button onclick="digitar('J')">J</button>
+            <button onclick="digitar('K')">K</button>
+            <button onclick="digitar('L')">L</button>
+            <button onclick="digitar('Ç')">Ç</button>
+        </div>
+
+        <div class="linha-teclado">
+            <button onclick="digitar(' ')">⇧</button>
+            <button onclick="digitar('Z')">Z</button>
+            <button onclick="digitar('X')">X</button>
+            <button onclick="digitar('C')">C</button>
+            <button onclick="digitar('V')">V</button>
+            <button onclick="digitar('B')">B</button>
+            <button onclick="digitar('N')">N</button>
+            <button onclick="digitar('M')">M</button>
+            <button class="espaco" onclick="digitar(' ')">
+                ESPAÇO
+            </button>
+        </div>
+
+        <div class="linha-teclado">
+            <button onclick="digitar('1')">1</button>
+            <button onclick="digitar('2')">2</button>
+            <button onclick="digitar('3')">3</button>
+            <button onclick="digitar('4')">4</button>
+            <button onclick="digitar('5')">5</button>
+            <button onclick="digitar('6')">6</button>
+            <button onclick="digitar('7')">7</button>
+            <button onclick="digitar('8')">8</button>
+            <button onclick="digitar('9')">9</button>
+            <button onclick="digitar('0')">0</button>
+        </div>
+
+    </div>
+
+    <div class="rodape">
+
+        <button class="btn-limpar">
+            <i class="far fa-trash-can"></i>
+            LIMPAR TUDO
+        </button>
+
+        <button class="btn-continuar"
+            onclick="window.location.href='Sintomas.html'">
+            CONTINUAR
+            <i class="fas fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
